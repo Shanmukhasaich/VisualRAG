@@ -1,8 +1,0 @@
-streamlit
-pillow
-sentence-transformers
-psycopg2-binary
-pgvector
-openai
-python-dotenv
-pytesseract
