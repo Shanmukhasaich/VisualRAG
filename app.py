@@ -8,10 +8,6 @@ from openai import OpenAI
 from dotenv import load_dotenv
 import os
 
-# ====================== TESSERACT PATH ======================
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-# =========================================================
-
 load_dotenv()
 
 # Cache Model
@@ -28,19 +24,18 @@ def get_db_connection():
         return conn
     except Exception as e:
         st.error(f"Database Connection Error: {e}")
-        st.info("Please check your DATABASE_URL in .env file")
         return None
 
 def setup_openai_client():
     api_key = os.getenv("API_KEY")
-    if not api_key or api_key.startswith("your_"):
-        st.error("❌ OpenRouter API Key is missing. Please add it in .env file")
+    if not api_key:
+        st.error("❌ OpenRouter API Key is missing. Please add it in Secrets.")
         return None
     try:
         client = OpenAI(api_key=api_key, base_url="https://openrouter.ai/api/v1")
         return client
     except Exception as e:
-        st.error(f"OpenAI Client Error: {e}")
+        st.error(f"OpenAI Error: {e}")
         return None
 
 openai_client = setup_openai_client()
@@ -48,7 +43,7 @@ openai_client = setup_openai_client()
 def split_into_chunks(text, chunk_size=500):
     return [text[i:i+chunk_size] for i in range(0, len(text), chunk_size)]
 
-# ================== Beautiful Title ==================
+# Beautiful Title
 st.markdown("""
     <h1 style='text-align: center; 
                background: linear-gradient(90deg, #ff3366, #00ffff, #ffcc00);
@@ -117,7 +112,6 @@ if st.session_state.get("processed", False):
                         cur.close()
                         conn.close()
                         prompt = f"""Answer based on the context only:\n\nContext: {context}\n\nQuestion: {question}"""
-                       
                         response = openai_client.chat.completions.create(
                             model="openai/gpt-3.5-turbo",
                             messages=[{"role": "user", "content": prompt}]
