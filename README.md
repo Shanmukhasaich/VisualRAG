@@ -1,8 +1,9 @@
 # 🚀 VisualRAG
+
 ## AI-Powered Visual Document Understanding using OCR + Vector Search + LLMs
 
 <p align="center">
-  <img src="Main.png" alt="VisualRAG Home Page" width="900">
+  <img src="./screenshots/Main.png" alt="VisualRAG Home Page" width="900">
 </p>
 
 <p align="center">
@@ -26,19 +27,13 @@ Instead of simply extracting text, the application understands the document's co
 
 # ✨ Features
 
-✅ Upload one or multiple document images
-
-✅ OCR-based text extraction using **Tesseract OCR**
-
-✅ Semantic search with **Sentence Transformers**
-
-✅ Vector storage using **PostgreSQL + pgvector**
-
-✅ AI-powered question answering using **OpenRouter LLM**
-
-✅ Clean and interactive **Streamlit UI**
-
-✅ Fast contextual retrieval using embeddings
+- ✅ Upload one or multiple document images
+- ✅ OCR-based text extraction using **Tesseract OCR**
+- ✅ Semantic search with **Sentence Transformers**
+- ✅ Vector storage using **PostgreSQL + pgvector**
+- ✅ AI-powered question answering using **OpenRouter LLM**
+- ✅ Clean and interactive **Streamlit UI**
+- ✅ Fast contextual retrieval using embeddings
 
 ---
 
@@ -58,18 +53,18 @@ Instead of simply extracting text, the application understands the document's co
 
 # 📸 Application Preview
 
-### 🏠 Home Screen
+## 🏠 Home Screen
 
 <p align="center">
-<img src="Main.png" width="900">
+  <img src="./screenshots/Main.png" alt="Home Screen" width="900">
 </p>
 
 ---
 
-### 💬 AI Answer Generation
+## 💬 AI Answer Generation
 
 <p align="center">
-<img src="output.png" width="900">
+  <img src="./screenshots/output.png" alt="AI Answer Generation" width="900">
 </p>
 
 ---
@@ -104,16 +99,15 @@ streamlit run app.py
 
 # 📂 Project Structure
 
-```
+```text
 VisualRAG/
 │
 ├── app.py
-├── models.py
 ├── requirements.txt
 ├── README.md
-├── .gitignore
-├── Main.png
-├── output.png
+├── screenshots/
+│   ├── Main.png
+│   └── output.png
 └── ...
 ```
 
@@ -148,20 +142,4 @@ VisualRAG/
 
 ## Chakiri Shanmukha Sai
 
-🎓 B.Tech CSE (Artificial Intelligence)
-
-🏫 KL University, Vijayawada
-
-💡 Passionate about AI, Machine Learning, NLP, Computer Vision, and Full-Stack AI Applications.
-
----
-
-# ⭐ If you like this project
-
-Please consider giving it a ⭐ on GitHub!
-
-It motivates me to build more AI-powered open-source projects.
-
----
-
-## Thank You ❤️
+🎓 **B.Tech CSE (Artificial Intelligence)**
