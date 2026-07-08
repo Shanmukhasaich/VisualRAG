@@ -2,9 +2,6 @@
 
 ## AI-Powered Visual Document Understanding using OCR + Vector Search + LLMs
 
-<p align="center">
-  <img src="./screenshots/Main.png" alt="VisualRAG Home Page" width="900">
-</p>
 
 <p align="center">
 
